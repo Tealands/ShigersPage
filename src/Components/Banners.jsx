@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
-import { ScreenContext } from './ScreenContext';
+import React, { useContext, useState } from 'react';
+import { ScreenContext } from './ScreenContext.js';
+import ImageModal from './ImageModal.jsx'; 
 import modIcon from '../assets/MOD.png';
 import mfsIcon from '../assets/MFS.jpg';
-import iamhomeIcon from '../assets/IamHome.png';
+// 【修正1】インポートが漏れていたので追加
+import iamhomeIcon from '../assets/IamHome.png'; 
 
 function Banners() {
   const { language } = useContext(ScreenContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const getText = (key) => {
     const texts = {
@@ -62,14 +65,14 @@ function Banners() {
           </span>
         </a>
       </div>
-
-      {/* I am Home バナー (修正箇所) */}
+      
+      {/* I am Home バナー */}
       <div className="w-full h-28 flex items-center justify-center">
-        {/* hrefを iamhomeIcon 変数に書き換えました */}
-        <a href={iamhomeIcon} 
-           target="_blank"
-           rel="noopener noreferrer"
-           className="flex items-center gap-3 bg-gradient-to-r from-green-700 to-white text-white px-14 py-2 rounded-lg shadow-lg font-bold text-lg hover:from-green-800 hover:to-gray-900 transition duration-300 ease-in-out w-full h-full">
+        <button 
+          onClick={() => setIsModalOpen(true)} 
+          className="flex items-center gap-3 bg-gradient-to-r from-green-700 to-white text-white px-14 py-2 rounded-lg shadow-lg font-bold text-lg hover:from-green-800 hover:to-gray-900 transition duration-300 ease-in-out w-full h-full text-left"
+        >
+          {/* 【修正】iamhomeIcon を正しく参照 */}
           <img src={iamhomeIcon} alt="I am home" className="w-12 h-10 rounded-full border-2 border-white bg-white" />
           <span>
             {getText('iamhome').split('\n').map((line, index) => (
@@ -79,10 +82,16 @@ function Banners() {
               </React.Fragment>
             ))}
           </span>
-        </a>
+        </button>
       </div>
 
-      {/* 広告スペース */}
+      {/* モーダルコンポーネントの設置 */}
+      <ImageModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        imgSrc={iamhomeIcon}  // 【修正2】画像ソースを渡す
+      />
+
       <div className="w-full h-28 flex items-center justify-center">
         <span className="text-gray-500 font-medium text-lg">
           {getText('bannerSpace')}
