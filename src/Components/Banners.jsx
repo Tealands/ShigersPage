@@ -58,8 +58,8 @@ function Banners() {
       </div>
 
       <div className="w-full h-28 flex items-center justify-center">
-        <a href="/src/assets/IamHome.png" target="_blank"
-          className="flex items-center gap-3 bg-gradient-to-r from-blue-700 to-white text-white px-14 py-2 rounded-lg shadow-lg font-bold text-lg hover:from-blue-800 hover:to-gray-900 transition duration-300 ease-in-out w-full h-full">
+        <a href="./src/assets/IamHome.png" target="_blank"
+          className="flex items-center gap-3 bg-gradient-to-r from-green-700 to-white text-white px-14 py-2 rounded-lg shadow-lg font-bold text-lg hover:from-green-800 hover:to-gray-900 transition duration-300 ease-in-out w-full h-full">
           <img src={iamhomeIcon} alt="I am home" className="w-12 h-10 rounded-full border-2 border-white bg-white" />
           <span>
             {getText('iamhome').split('\n').map((line, index) => (
