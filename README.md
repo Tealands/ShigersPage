@@ -6,7 +6,7 @@ https://tealands.github.io/ShigersPage/
 - 書いたnote記事のリンク
 - オリジナル問題集ページ
 - 趣味で書いた企画書一覧自己紹介ページ(企画書や問題集などの趣味、予備自衛官補、所属サークル)
-
+- 今後やりたいことリスト(GAS、Javaアプリ)
 
 
 # 使用技術
@@ -39,4 +39,5 @@ index.html->main.jsx->ScreenManager.jsx(画面遷移を管理)
 <br>&emsp;->RelatedPageScreen.jsx
 
 ![ホーム画面図](src/assets/HomeFigure.png)
+
 
