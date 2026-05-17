@@ -1,6 +1,12 @@
 # サイトのリンク
 https://tealands.github.io/ShigersPage/
 
+# ローカルでの実行方法
+```bash
+npm install
+npm run dev
+```
+
 
 # 今後の開発予定
 - MDで記事を書けるようにする

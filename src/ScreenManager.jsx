@@ -5,6 +5,8 @@ import Banners from './Components/Banners.jsx';
 import Hero from './Components/Hero';
 import RelatedPageScreen from './Components/RelatedPageScreen.jsx';
 import RepositoryScreen from './Components/RepositoryScreen.jsx';
+import IdeaArticlesScreen from './Components/IdeaArticlesScreen.jsx';
+import OriginalProblemsScreen from './Components/OriginalProblemsScreen.jsx';
 import TypingAnimation from './Components/Animetion';
 import HeaderPicture from './Components/HeaderPicture.jsx';
 
@@ -17,6 +19,8 @@ const ScreenManager = () => {
     const openTitleScreen = () => setCurrentScreen('TITLE');
     const openRelatedPageScreen = () => setCurrentScreen('RelatedPage');
     const openRepositoryScreen = () => setCurrentScreen('REPOSITORY');
+    const openIdeaArticlesScreen = () => setCurrentScreen('IDEA_ARTICLES');
+    const openOriginalProblemsScreen = () => setCurrentScreen('ORIGINAL_PROBLEMS');
 
     const toggleLanguage = () => setLanguage(prev => prev === 'ja' ? 'en' : 'ja');
 
@@ -26,12 +30,16 @@ const ScreenManager = () => {
         window.openTitleScreen = openTitleScreen;
         window.openSelfIntroductionScreen = openRelatedPageScreen;
         window.openRepositoryScreen = openRepositoryScreen;
+        window.openIdeaArticlesScreen = openIdeaArticlesScreen;
+        window.openOriginalProblemsScreen = openOriginalProblemsScreen;
 
         // Cleanup
         return () => {
             delete window.openTitleScreen;
             delete window.openRelatedPageScreen;
             delete window.openRepositoryScreen;
+            delete window.openIdeaArticlesScreen;
+            delete window.openOriginalProblemsScreen;
         };
     }, []);
 
@@ -89,13 +97,17 @@ const ScreenManager = () => {
                         </button>
                     </div>
                 );
+            case 'IDEA_ARTICLES':
+                return <IdeaArticlesScreen />;
+            case 'ORIGINAL_PROBLEMS':
+                return <OriginalProblemsScreen />;
             default:
                 return <div>Unknown Screen</div>;
         }
     };
 
     return (
-        <ScreenContext.Provider value={{ openTitleScreen, openRelatedPageScreen, openRepositoryScreen, language, toggleLanguage }}>
+        <ScreenContext.Provider value={{ openTitleScreen, openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, language, toggleLanguage }}>
             {renderScreen()}
         </ScreenContext.Provider>
     );

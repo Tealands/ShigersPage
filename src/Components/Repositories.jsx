@@ -7,12 +7,13 @@ const RepositoriesScreen = () => {
     const getText = (key) => {
         const texts = {
             ja: {
+                shigersPagesDesc:'このwebsiteです。',
                 numberPlaceDesc: 'ナンプレ（数独）ゲームです。クリアすると...',
                 moveStoneDesc: '石を動かせるようにした囲碁です。',
                 maximumQuizDesc: '私たちがチームで開発したプログラミングに関するクイズサイトです。',
                 sortTodoDesc: '私が個人で開発したソート機能付きTodoサイトです。ローカルファイルにデータを保存し、そこからデータを復元することもできます。',
                 dictionalyDesc: '辞書作成アプリです。単語は辞書順にソートされます。',
-                note: '上から入学1年目後期、入学1年目後期、2年目前期、2年目後期に開発したものです',
+                note: '',
                 skillsTitle1: 'プログラミング言語スキル',
                 language: '使った言語',
                 purpose: '用途',
@@ -20,6 +21,7 @@ const RepositoriesScreen = () => {
                 skillsTitle2: 'プログラミングツールスキル',
             },
             en: {
+                shigersPagesDesc:'This website`s repository',
                 numberPlaceDesc: 'This is a Number Place (Sudoku) game. When you clear it...',
                 moveStoneDesc: 'This is a Go game where you can move stones.',
                 maximumQuizDesc: 'This is a quiz site about programming that we developed as a team.',
@@ -40,9 +42,9 @@ const RepositoriesScreen = () => {
         { lang: 'C', purpose: language === 'ja' ? '大学の授業' : 'University courses', prof: '〇' },
         { lang: 'C++', purpose: language === 'ja' ? '競技プログラミング' : 'Competitive programming', prof: '△' },
         { lang: 'C#', purpose: 'Unity', prof: '△' },
-        { lang: 'Java', purpose: language === 'ja' ? '大学の授業' : 'University courses', prof: '△' },
+        { lang: 'Java(Kotlin)', purpose: language === 'ja' ? '大学の授業' : 'University courses', prof: '△' },
         { lang: 'React(js,ts)', purpose: language === 'ja' ? 'webサイト' : 'Website', prof: '〇' },
-        { lang: 'Python', purpose: language === 'ja' ? '大学の授業' : 'University courses', prof: '△' },
+        { lang: 'Python', purpose: language === 'ja' ? '大学の授業、Blender' : 'University courses', prof: '△' },
         { lang: 'SQL', purpose: language === 'ja' ? 'データベース' : 'Database', prof: '△' },
         { lang: 'HTML', purpose: language === 'ja' ? 'webサイト' : 'Website', prof: '〇' },
         { lang: 'MarkDown', purpose: language === 'ja' ? 'メモ' : 'Notes', prof: '〇' },
@@ -52,7 +54,9 @@ const RepositoriesScreen = () => {
     const skillsData2 = [
         { tool: 'VScode', purpose: language === 'ja' ? 'プログラミング全般' : 'General programming', prof: '◎' },
         { tool: 'GitHub', purpose: language === 'ja' ? 'Webサイト・ゲーム開発' : 'Website and game development', prof: '〇' },
-        { tool: 'Unity', purpose: language === 'ja' ? 'ゲーム開発' : 'Game development', prof: '△' }
+        { tool: 'Unity', purpose: language === 'ja' ? 'ゲーム開発' : 'Game development', prof: '△' },
+        { tool: 'Blender', purpose: language === 'ja' ? 'アニメーション開発' : 'Amimation development', prof: '△' },
+        { tool: 'Android Stodio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '△' }                
     ];
 
     return (
@@ -62,7 +66,19 @@ const RepositoriesScreen = () => {
                     <ul className="space-y-4">
                         <li>
                             <a
-                                href="https://tealands.github.io/ShigersGame/NumberPlace.html"
+                                href="https://github.com/Tealands/ShigersPage"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:text-blue-300 underline text-xl"
+                            >
+                                Shiger's website
+                            </a>                            
+                            <br></br>
+                            <span className="text-gray-400">{getText('shigersPagesDesc')}</span>
+                        </li>                          
+                        <li>
+                            <a
+                                href="https://github.com/Tealands/ShigersGame"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-400 hover:text-blue-300 underline text-xl"
@@ -74,7 +90,7 @@ const RepositoriesScreen = () => {
                         </li>      
                         <li>
                             <a
-                                href="https://tealands.github.io/ShigersGame/MoveStone.html"
+                                href="https://github.com/Tealands/ShigersGame"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-400 hover:text-blue-300 underline text-xl"
@@ -91,14 +107,14 @@ const RepositoriesScreen = () => {
                                 rel="noopener noreferrer"
                                 className="text-blue-400 hover:text-blue-300 underline text-xl"
                             >
-                                Maximum Quiz
+                                Maximum Quiz(このリポジトリは公開できません)
                             </a>
                             <br></br>
                             <span className="text-gray-400">{getText('maximumQuizDesc')}</span>
                         </li>
                         <li>
                             <a
-                                href="https://tealands.github.io/SortTodo/"
+                                href="https://github.com/Tealands/SortTodo"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-400 hover:text-blue-300 underline text-xl"

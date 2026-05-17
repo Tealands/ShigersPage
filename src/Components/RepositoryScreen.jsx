@@ -5,6 +5,7 @@ import GeminiImg from '../assets/Gemini.png';
 import AntigravityImg from '../assets/Antigravity.png';
 import CopilotImg from '../assets/Copilot.png';
 import ChatGPTImg from '../assets/ChatGPT.png';
+import ClaudeImg from '../assets/Claude.png';
 
 const RepositoryScreen = () => {
     const { language } = useContext(ScreenContext);
@@ -34,7 +35,9 @@ const RepositoryScreen = () => {
     const toolsData = [
         { tool: 'VScode', purpose: language === 'ja' ? 'プログラミング全般' : 'General programming', prof: '◎' },
         { tool: 'GitHub', purpose: language === 'ja' ? 'Webサイト・ゲーム開発' : 'Website and game development', prof: '〇' },
-        { tool: 'Unity', purpose: language === 'ja' ? 'ゲーム開発' : 'Game development', prof: '△' }
+        { tool: 'Unity', purpose: language === 'ja' ? 'ゲーム開発' : 'Game development', prof: '△' },
+        { tool: 'Blender', purpose: language === 'ja' ? 'アニメーション開発' : 'Amimation development', prof: '△' },
+        { tool: 'Android Stodio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '△' } 
     ];
 
     return (
@@ -90,6 +93,9 @@ const RepositoryScreen = () => {
                     </a>
                     <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
                         <img src={ChatGPTImg} alt="ChatGPT" className="w-24 h-24 object-contain" />
+                    </a>
+                    <a href="https://claude.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={ClaudeImg} alt="Claude" className="w-24 h-24 object-contain" />
                     </a>
                 </div>
             </div>
