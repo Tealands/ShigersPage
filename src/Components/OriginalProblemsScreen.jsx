@@ -19,7 +19,7 @@ const OriginalProblemsScreen = () => {
   const t = {
     ja: {
       title: 'オリジナル問題',
-      subtitle: '自作のプログラミング問題集です。ヒントと解答付き。',
+      subtitle: '自作の数学問題集です。ヒントと解答付き。',
       backToList: '← 問題一覧に戻る',
       backToTitle: 'タイトルへ戻る',
       postedOn: '投稿日',
@@ -27,7 +27,7 @@ const OriginalProblemsScreen = () => {
     },
     en: {
       title: 'Original Problems',
-      subtitle: 'A collection of original programming problems with hints and solutions.',
+      subtitle: 'A collection of original math problems with hints and solutions.',
       backToList: '← Back to List',
       backToTitle: 'Back to Title',
       postedOn: 'Posted on',
