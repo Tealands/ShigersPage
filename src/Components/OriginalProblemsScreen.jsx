@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import { ScreenContext } from './ScreenContext';
 import { problemArticles } from '../articles/problemsIndex';
@@ -124,10 +125,13 @@ const OriginalProblemsScreen = () => {
             prose-ul:text-gray-300 prose-ol:text-gray-300
             prose-li:marker:text-purple-400
             prose-hr:border-white/20
+            prose-table:w-full prose-table:border-collapse
+            prose-th:border prose-th:border-white/20 prose-th:bg-white/10 prose-th:px-4 prose-th:py-2 prose-th:text-left
+            prose-td:border prose-td:border-white/20 prose-td:px-4 prose-td:py-2
             [&_details]:bg-gray-800/60 [&_details]:border [&_details]:border-white/10 [&_details]:rounded-xl [&_details]:p-4 [&_details]:my-4
             [&_summary]:cursor-pointer [&_summary]:font-semibold [&_summary]:text-purple-300 [&_summary]:select-none
           ">
-            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{selectedProblem.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{selectedProblem.content}</ReactMarkdown>
           </article>
         )}
       </div>

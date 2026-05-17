@@ -4,7 +4,7 @@ export default function TypingLoop() {
   const text = "welcome";
   const typingSpeed = 150;   // 入力速度(ms)
   const deletingSpeed = 100; // 削除速度(ms)
-  const pauseTime = 800;     // 完了時の待機時間(ms)
+  const pauseTime = 1000;     // 完了時の待機時間(ms)
   const color = "#FFFFFF";
 
   const [displayedText, setDisplayedText] = useState("");
