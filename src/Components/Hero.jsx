@@ -11,13 +11,11 @@ const Hero = () => {
   const getText = (key) => {
     const texts = {
       ja: {
-        status: '✨ こんにちは！',
         title: 'しげるのウェブサイト',
         subtitle: 'ソフトウェア & ゲーム製作勉強中の大学生',
         description: '私はしげる、ソフトウェア開発とゲーム制作に情熱を持つ大学生です。現在はアイフラッグという会社でエンジニアとして長期インターンに参加しています。私のプロジェクトと経験を共有する個人ウェブサイトへようこそ。'
       },
       en: {
-        status: '✨ Hello World!',
         title: "Shiger's website",
         subtitle: 'Software Developer & Game Creator',
         description: 'I am Shiger, a university student passionate about software development and game creation. I enjoy exploring new technologies and turning ideas into reality through code. Welcome to my personal website where I share my projects and experiences.'
@@ -28,11 +26,6 @@ const Hero = () => {
 
   return (
     <div className="flex flex-col items-center text-center space-y-8">
-      {/* ステータスバッジ（半透明のガラス風） */}
-      <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium">
-        <span className="mr-2">✨</span>
-        {language === 'ja' ? 'こんにちは！' : 'Hello World!'}
-      </div>
 
       {/* メインタイトル（白で視認性を確保） */}
       <div className="space-y-4">

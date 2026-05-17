@@ -4,13 +4,14 @@ import React, { useContext, useState, useEffect } from 'react';
 import backScreen1 from '../assets/BackScreen1.JPG';
 import backScreen2 from '../assets/BackScreen2.JPG';
 import backScreen3 from '../assets/BackScreen3.JPG';
+import shigerwallpaper from '../assets/shigerwallpaper.png';
 import { ScreenContext } from './ScreenContext';
 
 const HeaderPicture = ({ title, subtitle, children }) => {
   const { language, toggleLanguage } = useContext(ScreenContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = [backScreen1, backScreen2, backScreen3];
+  const images = [backScreen1, backScreen2, backScreen3, shigerwallpaper];
 
   useEffect(() => {
     const interval = setInterval(() => {
