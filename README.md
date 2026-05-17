@@ -16,14 +16,10 @@ npm run dev
 
 
 # 今後の開発予定
-<<<<<<< HEAD
 - ClaudeでCI/CDの構築を試みる予定
-- アクセス数が分かるようににする
+- アクセス数が分かるようにする
 - 画面遷移のアニメーションを追加する予定
-
-=======
 - 今後やりたいことリスト(GAS、Javaアプリ)
->>>>>>> d154295a9e05fa8873575af7d32be8f8765681d1
 
 
 # 使用技術
@@ -43,17 +39,25 @@ index.html->main.jsx->ScreenManager.jsx(画面遷移を管理)
 <br>&emsp;->HeaderPicture.jsx
 <br>&emsp;->Animetion.jsx
 <br>&emsp;->App.jsx->Hero.jsx
-<br>&emsp;&emsp;->Action.jsx
+<br>&emsp;&emsp;->ActionButtons.jsx
 <br>&emsp;&emsp;->SocialIcons.jsx
-<br>&emsp;->Banner.jsx
+<br>&emsp;->Banners.jsx
 
 ### リポジトリ画面
 index.html->main.jsx->ScreenManager.jsx(画面遷移を管理)
-<br>&emsp;->RepositryScreen.jsx->Repositries.jsx
+<br>&emsp;->RepositoryScreen.jsx->Repositories.jsx
 
 ### 関連サイト画面
 index.html->main.jsx->ScreenManager.jsx(画面遷移を管理)
 <br>&emsp;->RelatedPageScreen.jsx
+
+### アイデア記事画面
+index.html->main.jsx->ScreenManager.jsx(画面遷移を管理)
+<br>&emsp;->IdeaArticlesScreen.jsx
+
+### オリジナル問題画面
+index.html->main.jsx->ScreenManager.jsx(画面遷移を管理)
+<br>&emsp;->OriginalProblemsScreen.jsx
 
 ![ホーム画面図](src/assets/HomeFigure.png)
 
