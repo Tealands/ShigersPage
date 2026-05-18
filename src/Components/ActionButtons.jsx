@@ -12,7 +12,7 @@ const ActionButtons = () => {
         viewRepositories: 'リポジトリを見る',
         ideaArticles: 'アイデア記事',
         originalProblems: 'オリジナル問題',
-        gallery: 'ギャラリー',
+        gallery: '旅行で撮った写真',
         qualifications: '保有資格一覧',
       },
       en: {
@@ -20,7 +20,7 @@ const ActionButtons = () => {
         viewRepositories: 'View Repositories',
         ideaArticles: 'Idea Articles',
         originalProblems: 'Original Problems',
-        gallery: 'Gallery',
+        gallery: 'Pictures of Trip',
         qualifications: 'Qualifications',
       }
     };

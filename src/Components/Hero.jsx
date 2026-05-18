@@ -13,12 +13,12 @@ const Hero = () => {
       ja: {
         title: 'しげるのウェブサイト',
         subtitle: 'ソフトウェア & ゲーム製作勉強中の大学生',
-        description: '私はしげる、ソフトウェア開発とゲーム制作に情熱を持つ大学生です。現在はアイフラッグという会社でエンジニアとして長期インターンに参加しています。あと一応私のプロジェクトと経験を共有する個人ウェブサイトへようこそ。'
+        description: '私はしげる、ソフトウェア開発とゲーム制作を勉強している大学生です。趣味は旅行とゲーム、思いついたアイデアを企画書にすることと数学やパズルの問題を作ることです。現在はアイフラッグという会社でエンジニアとして長期インターンに参加しています。私のプロジェクトと趣味を共有するウェブサイトへようこそ。'
       },
       en: {
         title: "Shiger's website",
         subtitle: 'Software Developer & Game Creator',
-        description: 'I am Shiger, a university student passionate about software development and game creation. I enjoy exploring new technologies and turning ideas into reality through code. Welcome to my personal website where I share my projects and experiences.'
+        description: 'I am Shiger, a university student studying software development and game creation. My hobbies include traveling, gaming, turning ideas into project proposals, and creating math and puzzle problems. I am currently interning as an engineer at "Iflag". Welcome to my website where I share my projects and hobbies.'
       }
     };
     return texts[language][key];
