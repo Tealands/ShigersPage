@@ -99,7 +99,7 @@ const RepositoryScreen = () => {
                     <a href="https://claude.com/" target="_blank" rel="noopener noreferrer">
                         <img src={ClaudeImg} alt="Claude" className="w-24 h-24 object-contain" />
                     </a>
-                    <a href="https://sora.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://pollo.ai/ja/m/sora" target="_blank" rel="noopener noreferrer">
                         <img src={SoraImg} alt="Sora" className="w-24 h-24 object-contain" />
                     </a>
                     <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">
