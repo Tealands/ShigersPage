@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { ScreenContext } from './ScreenContext.js';
-import modIcon from '../assets/MOD.png';
-import mfsIcon from '../assets/MFS.jpg';
-import IflagIcon from '../assets/Iflag.png';
+import modIcon from '../assets/icon/MOD.png';
+import mfsIcon from '../assets/icon/MFS.jpg';
+import IflagIcon from '../assets/icon/Iflag.png';
 // 【修正1】インポートが漏れていたので追加
 
 function Banners() {

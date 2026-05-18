@@ -7,6 +7,8 @@ import RelatedPageScreen from './Components/RelatedPageScreen.jsx';
 import RepositoryScreen from './Components/RepositoryScreen.jsx';
 import IdeaArticlesScreen from './Components/IdeaArticlesScreen.jsx';
 import OriginalProblemsScreen from './Components/OriginalProblemsScreen.jsx';
+import GalleryScreen from './Components/GalleryScreen.jsx';
+import QualificationsScreen from './Components/QualificationsScreen.jsx';
 import TypingAnimation from './Components/Animetion';
 import HeaderPicture from './Components/HeaderPicture.jsx';
 
@@ -21,6 +23,8 @@ const ScreenManager = () => {
     const openRepositoryScreen = () => setCurrentScreen('REPOSITORY');
     const openIdeaArticlesScreen = () => setCurrentScreen('IDEA_ARTICLES');
     const openOriginalProblemsScreen = () => setCurrentScreen('ORIGINAL_PROBLEMS');
+    const openGalleryScreen = () => setCurrentScreen('GALLERY');
+    const openQualificationsScreen = () => setCurrentScreen('QUALIFICATIONS');
 
     const toggleLanguage = () => setLanguage(prev => prev === 'ja' ? 'en' : 'ja');
 
@@ -101,13 +105,25 @@ const ScreenManager = () => {
                 return <IdeaArticlesScreen />;
             case 'ORIGINAL_PROBLEMS':
                 return <OriginalProblemsScreen />;
+            case 'GALLERY':
+                return (
+                    <div className="min-h-screen bg-gray-900">
+                        <GalleryScreen />
+                    </div>
+                );
+            case 'QUALIFICATIONS':
+                return (
+                    <div className="min-h-screen bg-gray-900">
+                        <QualificationsScreen />
+                    </div>
+                );
             default:
                 return <div>Unknown Screen</div>;
         }
     };
 
     return (
-        <ScreenContext.Provider value={{ openTitleScreen, openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, language, toggleLanguage }}>
+        <ScreenContext.Provider value={{ openTitleScreen, openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, openGalleryScreen, openQualificationsScreen, language, toggleLanguage }}>
             {renderScreen()}
         </ScreenContext.Provider>
     );

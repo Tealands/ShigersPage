@@ -3,7 +3,7 @@ import { ScreenContext } from './ScreenContext';
 
 const ActionButtons = () => {
   const context = useContext(ScreenContext);
-  const { openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, language } = context || {};
+  const { openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, openGalleryScreen, openQualificationsScreen, language } = context || {};
 
   const getText = (key) => {
     const texts = {
@@ -12,12 +12,16 @@ const ActionButtons = () => {
         viewRepositories: 'リポジトリを見る',
         ideaArticles: 'アイデア記事',
         originalProblems: 'オリジナル問題',
+        gallery: 'ギャラリー',
+        qualifications: '保有資格一覧',
       },
       en: {
         relatedSites: 'Related Sites',
         viewRepositories: 'View Repositories',
         ideaArticles: 'Idea Articles',
         originalProblems: 'Original Problems',
+        gallery: 'Gallery',
+        qualifications: 'Qualifications',
       }
     };
     return texts[language]?.[key] ?? texts['ja'][key];
@@ -66,6 +70,28 @@ const ActionButtons = () => {
         </svg>
       ),
       colorClass: 'bg-purple-900/40 hover:bg-purple-800/60 border border-purple-400/30 hover:border-purple-400/60 text-purple-300',
+    },
+    {
+      label: getText('gallery'),
+      onClick: () => openGalleryScreen?.(),
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      ),
+      colorClass: 'bg-emerald-900/40 hover:bg-emerald-800/60 border border-emerald-400/30 hover:border-emerald-400/60 text-emerald-300',
+    },
+    {
+      label: getText('qualifications'),
+      onClick: () => openQualificationsScreen?.(),
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      ),
+      colorClass: 'bg-amber-900/40 hover:bg-amber-800/60 border border-amber-400/30 hover:border-amber-400/60 text-amber-300',
     },
   ];
 

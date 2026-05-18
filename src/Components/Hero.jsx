@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import SocialIcons from './SocialIcons';
 import ActionButtons from './ActionButtons';
-import snowManIcon from '../assets/SnowMan1.png';
+import snowManIcon from '../assets/icon/SnowMan1.png';
 import { ScreenContext } from './ScreenContext';
 
 const Hero = () => {

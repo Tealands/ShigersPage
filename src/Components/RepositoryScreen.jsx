@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import Repositories from './Repositories.jsx';
 import { ScreenContext } from './ScreenContext';
-import GeminiImg from '../assets/Gemini.png';
-import AntigravityImg from '../assets/Antigravity.png';
-import CopilotImg from '../assets/Copilot.png';
-import ChatGPTImg from '../assets/ChatGPT.png';
-import ClaudeImg from '../assets/Claude.png';
+import GeminiImg from '../assets/AI/Gemini.png';
+import AntigravityImg from '../assets/AI/Antigravity.png';
+import CopilotImg from '../assets/AI/Copilot.png';
+import ChatGPTImg from '../assets/AI/ChatGPT.png';
+import ClaudeImg from '../assets/AI/Claude.png';
 
 const RepositoryScreen = () => {
     const { language } = useContext(ScreenContext);

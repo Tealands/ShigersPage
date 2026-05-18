@@ -1,17 +1,36 @@
 import React, { useContext, useState, useEffect } from 'react';
 // 1. 画像をインポートします。パスはご自身のプロジェクト構成に合わせて調整してください。
 // 例: このコンポーネントが src/Components/ にあり、画像が src/assets/ にある場合
-import backScreen1 from '../assets/BackScreen1.JPG';
-import backScreen2 from '../assets/BackScreen2.JPG';
-import backScreen3 from '../assets/BackScreen3.JPG';
-import shigerwallpaper from '../assets/shigerwallpaper.png';
+import fallingSun from '../assets/BackScreen/FallingSun.JPG';
+import nightView from '../assets/BackScreen/NightView.JPG';
+import seaSide from '../assets/BackScreen/SeaSide.JPG';
+import shigerwallpaper from '../assets/WallPaper/shigerwallpaper.png';
+import aTownAtDusk from '../assets/BackScreen/ATownAtDusk.jpg';
+import blueOcean from '../assets/BackScreen/BlueOcean.JPG';
+import blueRiver from '../assets/BackScreen/BlueRiver.JPG';
+import shaningBridge from '../assets/BackScreen/ShaningBridge.JPG';
+import winterRiver from '../assets/BackScreen/WinterRiver.JPG';
 import { ScreenContext } from './ScreenContext';
+
+const shuffle = (arr) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+const allBackScreenImages = [
+  fallingSun, nightView, seaSide, shigerwallpaper,
+  aTownAtDusk, blueOcean, blueRiver, shaningBridge, winterRiver,
+];
 
 const HeaderPicture = ({ title, subtitle, children }) => {
   const { language, toggleLanguage } = useContext(ScreenContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = [backScreen1, backScreen2, backScreen3, shigerwallpaper];
+  const [images] = useState(() => shuffle(allBackScreenImages));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,6 +78,18 @@ return (
           )}
           {children}
         </div>
+      </div>
+      {/* 次の画像ボタン */}
+      <div className="absolute bottom-4 right-4 z-20">
+        <button
+          onClick={() => setCurrentImageIndex((prev) => (prev + 1) % images.length)}
+          className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-lg hover:bg-white/20 transition-all"
+        >
+          <span className="text-sm">{language === 'ja' ? '次の画像' : 'Next'}</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </header>
   );
