@@ -6,6 +6,8 @@ import AntigravityImg from '../assets/AI/Antigravity.png';
 import CopilotImg from '../assets/AI/Copilot.png';
 import ChatGPTImg from '../assets/AI/ChatGPT.png';
 import ClaudeImg from '../assets/AI/Claude.png';
+import SoraImg from '../assets/AI/Sora.png';
+import PerplexityImg from '../assets/AI/Perplexity.png';
 
 const RepositoryScreen = () => {
     const { language } = useContext(ScreenContext);
@@ -19,14 +21,14 @@ const RepositoryScreen = () => {
                 tool: '使用ツール',
                 purpose: '用途',
                 proficiency: 'どれくらい使えるか',
-                codingSupportedBy: 'Coding Supported by'
+                UsingSuchAI: 'Using such AI'
             },
             en: {
                 toolsTitle: 'Tools I Used',
                 tool: 'Tool',
                 purpose: 'Purpose',
                 proficiency: 'Proficiency',
-                codingSupportedBy: 'Coding Supported by'
+                UsingSuchAI: 'Using such AI'
             }
         };
         return texts[language][key];
@@ -80,7 +82,7 @@ const RepositoryScreen = () => {
                 </div>
             </div>
             <div className="p-8 max-w-4xl mx-auto">
-                <h2 className="text-2xl font-bold text-white mb-4">{getText('codingSupportedBy')}</h2>
+                <h2 className="text-2xl font-bold text-white mb-4">{getText('UsingSuchAI')}</h2>
                 <div className="flex flex-wrap gap-4">
                     <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
                         <img src={GeminiImg} alt="Gemini" className="w-24 h-24 object-contain" />
@@ -96,6 +98,12 @@ const RepositoryScreen = () => {
                     </a>
                     <a href="https://claude.com/" target="_blank" rel="noopener noreferrer">
                         <img src={ClaudeImg} alt="Claude" className="w-24 h-24 object-contain" />
+                    </a>
+                    <a href="https://sora.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={SoraImg} alt="Sora" className="w-24 h-24 object-contain" />
+                    </a>
+                    <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">
+                        <img src={PerplexityImg} alt="Perplexity" className="w-24 h-24 object-contain" />
                     </a>
                 </div>
             </div>
