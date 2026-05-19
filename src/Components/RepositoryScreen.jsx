@@ -38,8 +38,9 @@ const RepositoryScreen = () => {
         { tool: 'VScode', purpose: language === 'ja' ? 'プログラミング全般' : 'General programming', prof: '◎' },
         { tool: 'GitHub', purpose: language === 'ja' ? 'Webサイト・ゲーム開発' : 'Website and game development', prof: '〇' },
         { tool: 'Unity', purpose: language === 'ja' ? 'ゲーム開発' : 'Game development', prof: '△' },
-        { tool: 'Blender', purpose: language === 'ja' ? 'アニメーション開発' : 'Amimation development', prof: '△' },
-        { tool: 'Android Stodio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '△' } 
+        { tool: 'Blender', purpose: language === 'ja' ? 'アニメーション開発' : 'Animation development', prof: '△' },
+        { tool: 'Android Studio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '△' }, 
+        { tool: 'Processing', purpose: language === 'ja' ? 'グラフィックデザイン' : 'Graphic design', prof: '△' }
     ];
 
     return (
