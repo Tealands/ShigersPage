@@ -1,12 +1,25 @@
-import animeBonds from './ideas/AnimeBonds.md?raw';
-import gravediggerScheme from './ideas/GravediggerScheme.md?raw';
-import threeAccountSystem from './ideas/ThreeAcountSystem.md?raw';
-import aiAndCreativity from './ideas/ai-and-creativity.md?raw';
-import helloWorld from './ideas/hello-world.md?raw';
+import helloWorld from './ideas/Hello-world.md?raw';
+import animeBonds from './ideas/Anime-bonds.md?raw';
+import gravediggerScheme from './ideas/Gravedigger-scheme.md?raw';
+import lightbag from './ideas/Light-bag.md?raw';
+import pairRecrute from './ideas/Pair-recrute.md?raw';
+import recordedTest from './ideas/Recorded-test.md?raw';
+import studentsStyle from './ideas/Students-style.md?raw';
+import threeAccountSystem from './ideas/Three-acount-system.md?raw';
 
 export const ideaArticles = [
   {
     id: 1,
+    slug: 'hello-world',
+    title: 'はじめてのアイデア記事',
+    titleEn: 'First Idea Article',
+    date: '2026-05-17',
+    description: 'このアイデア記事ページのはじまりについて。',
+    descriptionEn: 'The beginning of this idea articles page.',
+    content: helloWorld,
+  },
+  {
+    id: 2,
     slug: 'anime-bonds',
     title: 'ネット証券×出版社 共同プロジェクト企画提案書',
     titleEn: 'Net Securities × Publisher Joint Project Proposal',
@@ -16,7 +29,7 @@ export const ideaArticles = [
     content: animeBonds,
   },
   {
-    id: 2,
+    id: 3,
     slug: 'gravedigger-scheme',
     title: '金融商品企画提案書：墓守スキーム',
     titleEn: 'Financial Product Proposal: Gravedigger Scheme',
@@ -26,8 +39,8 @@ export const ideaArticles = [
     content: gravediggerScheme,
   },
   {
-    id: 3,
-    slug: 'three-account-system',
+    id: 4,
+    slug: 'threeAccountSystem',
     title: '3口座管理サービス企画書',
     titleEn: 'Three-Account Management Service Proposal',
     date: '2026-05-17',
@@ -36,23 +49,43 @@ export const ideaArticles = [
     content: threeAccountSystem,
   },
   {
-    id: 4,
-    slug: 'ai-and-creativity',
-    title: 'AIと創作の関係について考える',
-    titleEn: 'AI and Creativity',
+    id: 5,
+    slug: 'pair-recrute',
+    title: 'ペアリクルート企画',
+    titleEn: 'Pair Recruit Proposal',
     date: '2026-05-17',
-    description: 'AIツールを使う中で感じた、創作との向き合い方について。',
-    descriptionEn: 'Thoughts on the relationship between AI tools and creative work.',
-    content: aiAndCreativity,
+    description: 'ペアでの採用や協働を促進する企画書。',
+    descriptionEn: 'A proposal to promote hiring and collaboration in pairs.',
+    content: pairRecrute,
   },
   {
-    id: 5,
-    slug: 'hello-world',
-    title: 'はじめてのアイデア記事',
-    titleEn: 'First Idea Article',
+    id: 6,
+    slug: 'recordedTest',
+    title: '記録テスト',
+    titleEn: 'Recorded Test',
     date: '2026-05-17',
-    description: 'このアイデア記事ページのはじまりについて。',
-    descriptionEn: 'The beginning of this idea articles page.',
-    content: helloWorld,
+    description: '模試の回答の様子を記録して振り返りをしやすくする。',
+    descriptionEn: 'About the results of recorded tests.',
+    content: recordedTest,
+  },
+  {
+    id: 7,
+    slug: 'studentStyle',
+    title: '学生のスタイルについて',
+    titleEn: 'About Student Styles',
+    date: '2026-05-17',
+    description: '学生の容姿に関する指導をするサービスの企画書。',
+    descriptionEn: 'Considerations on student learning styles.',
+    content: studentsStyle,
+  },
+  {
+    id: 8,
+    slug: 'lightbag',
+    title: '身軽で旅行ができる企画',
+    titleEn: 'Lightbag Proposal',
+    date: '2026-05-17',
+    description: '持ち物を減らして身軽に旅行ができる企画書。',
+    descriptionEn: 'A proposal for a lightweight and functional bag.',
+    content: lightbag,
   },
 ];
