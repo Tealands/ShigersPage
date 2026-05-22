@@ -40,23 +40,24 @@ const RepositoriesScreen = () => {
 
     const skillsData1 = [
         { lang: 'C', purpose: language === 'ja' ? '大学の授業' : 'University courses', prof: '〇' },
-        { lang: 'C++', purpose: language === 'ja' ? '競技プログラミング' : 'Competitive programming', prof: '△' },
+        { lang: 'C++', purpose: language === 'ja' ? '競技プログラミング' : 'Competitive programming', prof: '〇' },
         { lang: 'C#', purpose: 'Unity', prof: '△' },
         { lang: 'Java(Kotlin)', purpose: language === 'ja' ? '大学の授業' : 'University courses', prof: '△' },
         { lang: 'React(js,ts)', purpose: language === 'ja' ? 'webサイト' : 'Website', prof: '〇' },
-        { lang: 'Python', purpose: language === 'ja' ? '大学の授業、Blender' : 'University courses', prof: '△' },
-        { lang: 'SQL', purpose: language === 'ja' ? 'データベース' : 'Database', prof: '△' },
+        { lang: 'Python', purpose: language === 'ja' ? '大学の授業、Blender' : 'University courses', prof: '〇' },
+        { lang: 'SQL', purpose: language === 'ja' ? 'データベース' : 'Database', prof: '〇' },
         { lang: 'HTML', purpose: language === 'ja' ? 'webサイト' : 'Website', prof: '〇' },
         { lang: 'MarkDown', purpose: language === 'ja' ? 'メモ' : 'Notes', prof: '〇' },
-        { lang: 'CSS', purpose: language === 'ja' ? 'webサイト' : 'Website', prof: '△' }
+        { lang: 'CSS', purpose: language === 'ja' ? 'webサイト' : 'Website', prof: '〇' },
+        { lang: 'ShellScript', purpose: language === 'ja' ? 'コマンドの効率化' : 'Command efficiency', prof: '〇' }
     ];
 
     const skillsData2 = [
         { tool: 'VScode', purpose: language === 'ja' ? 'プログラミング全般' : 'General programming', prof: '◎' },
-        { tool: 'GitHub', purpose: language === 'ja' ? 'Webサイト・ゲーム開発' : 'Website and game development', prof: '〇' },
+        { tool: 'GitHub', purpose: language === 'ja' ? 'Webサイト・ゲーム開発' : 'Website and game development', prof: '◎' },
         { tool: 'Unity', purpose: language === 'ja' ? 'ゲーム開発' : 'Game development', prof: '△' },
-        { tool: 'Blender', purpose: language === 'ja' ? 'アニメーション開発' : 'Amimation development', prof: '△' },
-        { tool: 'Android Stodio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '△' }                
+        { tool: 'Blender', purpose: language === 'ja' ? 'アニメーション開発' : 'Animation development', prof: '△' },
+        { tool: 'Android Studio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '△' }                
     ];
 
     return (
