@@ -8,6 +8,10 @@ if [ $# -ne 1 ]; then
 fi
 # コミットメッセージ
 commit_message="$1"
+
+# 一旦pullして最新の状態を取得
+git pull origin main
+
 # 変更をステージング
 git add .
 # コミット
