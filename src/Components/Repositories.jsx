@@ -128,6 +128,18 @@ const RepositoriesScreen = () => {
                             </a>
                             <br></br>
                             <span className="text-gray-400">{getText('maximumQuizDesc')}</span>
+                        </li>                        
+                        <li>
+                            <a
+                                href="https://tealands.github.io/MakeDictionaly/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:text-blue-300 underline text-xl"
+                            >
+                                MakeDictionaly
+                            </a>
+                            <br></br>
+                            <span className="text-gray-400">{getText('dictionalyDesc')}</span>
                         </li>
                         <li>
                             <a
@@ -143,20 +155,13 @@ const RepositoriesScreen = () => {
                         </li>
                         <li>
                             <a
-                                href="https://tealands.github.io/MakeDictionaly/"
+                                href="https://github.com/Tealands/TodoApp"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-400 hover:text-blue-300 underline text-xl"
                             >
-                                MakeDictionaly
+                                TodoApp
                             </a>
-                            <br></br>
-                            <span className="text-gray-400">{getText('dictionalyDesc')}</span>
-                        </li>
-                        <li>
-                            <span className="text-blue-400 text-xl font-semibold">
-                                {getText('todoAppName')}
-                            </span>
                             <br />
                             <span className="text-gray-400">{getText('todoAppDesc')}</span>
                             <ul className="mt-2 ml-4 list-disc text-gray-400 text-sm space-y-1">
@@ -169,11 +174,13 @@ const RepositoriesScreen = () => {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors text-sm font-medium"
                                 >
+                                TodoApp
+                                </a>
+                            <br></br>                                    
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 4v12m0 0l-4-4m4 4l4-4" />
                                     </svg>
                                     {getText('todoAppInstallBtn')}
-                                </a>
                                 <p className="mt-1 text-gray-500 text-xs">{getText('todoAppInstallNote')}</p>
                             </div>
                         </li>
