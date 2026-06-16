@@ -122,7 +122,7 @@ const OriginalProblemsScreen = () => {
             prose-blockquote:border-purple-500 prose-blockquote:bg-purple-900/20 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:text-gray-300
             prose-code:text-purple-300 prose-code:bg-gray-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
             prose-pre:bg-gray-800 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-xl
-            prose-ul:text-gray-300 prose-ol:text-gray-300
+            prose-ul:text-gray-300 prose-ul:text-left prose-ol:text-gray-300 prose-ol:text-left prose-li:text-left
             prose-li:marker:text-purple-400
             prose-hr:border-white/20
             prose-table:w-full prose-table:border-collapse

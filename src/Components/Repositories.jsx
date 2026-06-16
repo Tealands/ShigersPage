@@ -13,6 +13,14 @@ const RepositoriesScreen = () => {
                 maximumQuizDesc: '私たちがチームで開発したプログラミングに関するクイズサイトです。',
                 sortTodoDesc: '私が個人で開発したソート機能付きTodoサイトです。ローカルファイルにデータを保存し、そこからデータを復元することもできます。',
                 dictionalyDesc: '辞書作成アプリです。単語は辞書順にソートされます。',
+                todoAppName: 'TodoApp（デスクトップ版）',
+                todoAppDesc: 'Microsoft Access Database に対応したWindowsデスクトップTodoアプリです。Python(Flask)製で、インストーラー1つで環境構築不要で使えます。',
+                todoAppFeature1: 'ASAPゾーン：今すぐやるタスクを管理',
+                todoAppFeature2: 'メインリスト：期限付きタスクを管理',
+                todoAppFeature3: 'JSONエクスポートでバックアップ可能',
+                todoAppFeature4: 'Windows専用（64bit）',
+                todoAppInstallBtn: 'インストーラーをダウンロード（tar.gz）',
+                todoAppInstallNote: '※ Windows 64bit 専用。ダブルクリックで起動します。',
                 note: '',
                 skillsTitle1: 'プログラミング言語スキル',
                 language: '使った言語',
@@ -27,6 +35,14 @@ const RepositoriesScreen = () => {
                 maximumQuizDesc: 'This is a quiz site about programming that we developed as a team.',
                 sortTodoDesc: 'This is a Todo site with sorting functionality that I developed personally. It saves data to a local file and can also restore data from there.',
                 dictionalyDesc: 'This is a dictionary creation app. Words are sorted in dictionary order.',
+                todoAppName: 'TodoApp (Desktop)',
+                todoAppDesc: 'A Windows desktop Todo app backed by Microsoft Access Database. Built with Python (Flask); one installer sets everything up — no environment setup needed.',
+                todoAppFeature1: 'ASAP Zone: manage urgent tasks',
+                todoAppFeature2: 'Main List: manage tasks with deadlines',
+                todoAppFeature3: 'JSON export for backup',
+                todoAppFeature4: 'Windows only (64-bit)',
+                todoAppInstallBtn: 'Download Installer (tar.gz)',
+                todoAppInstallNote: '* Windows 64-bit only. Double-click to run.',
                 note: 'From top to bottom, developed in the second semester of freshman year, first semester of sophomore year, and second semester of sophomore year.',
                 skillsTitle1: 'Programming Language Skills',
                 language: 'Language',
@@ -136,6 +152,30 @@ const RepositoriesScreen = () => {
                             </a>
                             <br></br>
                             <span className="text-gray-400">{getText('dictionalyDesc')}</span>
+                        </li>
+                        <li>
+                            <span className="text-blue-400 text-xl font-semibold">
+                                {getText('todoAppName')}
+                            </span>
+                            <br />
+                            <span className="text-gray-400">{getText('todoAppDesc')}</span>
+                            <ul className="mt-2 ml-4 list-disc text-gray-400 text-sm space-y-1">
+                            </ul>
+                            <div className="mt-3">
+                                <a
+                                    href="https://github.com/Tealands/TodoApp/archive/refs/tags/v1.0.0.tar.gz"
+                                    download="TodoApp.tar.gz"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors text-sm font-medium"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 4v12m0 0l-4-4m4 4l4-4" />
+                                    </svg>
+                                    {getText('todoAppInstallBtn')}
+                                </a>
+                                <p className="mt-1 text-gray-500 text-xs">{getText('todoAppInstallNote')}</p>
+                            </div>
                         </li>
                         <h3>{getText('note')}</h3>
                         
