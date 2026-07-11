@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
 import { ScreenContext } from './ScreenContext';
 import { problemArticles } from '../articles/problemsIndex';
 
@@ -131,7 +132,7 @@ const OriginalProblemsScreen = () => {
             [&_details]:bg-gray-800/60 [&_details]:border [&_details]:border-white/10 [&_details]:rounded-xl [&_details]:p-4 [&_details]:my-4
             [&_summary]:cursor-pointer [&_summary]:font-semibold [&_summary]:text-purple-300 [&_summary]:select-none
           ">
-            <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{selectedProblem.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]}>{selectedProblem.content}</ReactMarkdown>
           </article>
         )}
       </div>

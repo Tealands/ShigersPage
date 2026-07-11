@@ -4,31 +4,32 @@ import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
+import Mermaid from './Mermaid';
 import { ScreenContext } from './ScreenContext';
-import { ideaArticles } from '../articles/ideasIndex';
+import { reportArticles } from '../articles/reportIndex';
 
-const IdeaArticlesScreen = () => {
+const ReportScreen = () => {
   const { openTitleScreen, language } = useContext(ScreenContext);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   const t = {
     ja: {
-      title: 'アイデア記事',
-      subtitle: '思いついたこと・考えたことを書いています',
+      title: 'レポート',
+      subtitle: '勉強したこと・調べたことをまとめています',
       backToList: '← 記事一覧に戻る',
       backToTitle: 'タイトルへ戻る',
       postedOn: '投稿日',
     },
     en: {
-      title: 'Idea Articles',
-      subtitle: 'Thoughts and ideas that come to mind',
+      title: 'Reports',
+      subtitle: 'Summaries of what I have studied and researched',
       backToList: '← Back to List',
       backToTitle: 'Back to Title',
       postedOn: 'Posted on',
     },
   }[language] || {
-    title: 'アイデア記事',
-    subtitle: '思いついたこと・考えたことを書いています',
+    title: 'レポート',
+    subtitle: '勉強したこと・調べたことをまとめています',
     backToList: '← 記事一覧に戻る',
     backToTitle: 'タイトルへ戻る',
     postedOn: '投稿日',
@@ -36,6 +37,45 @@ const IdeaArticlesScreen = () => {
 
   const getTitle = (article) => language === 'en' ? article.titleEn : article.title;
   const getDescription = (article) => language === 'en' ? article.descriptionEn : article.description;
+
+  // Markdown内の相対リンク（./xxx）を配信URLに書き換え、ファイルはダウンロードさせる
+  const markdownComponents = {
+    // ```mermaid のコードブロックを図としてレンダリングする
+    code: ({ className, children, ...props }) => {
+      if (/\blanguage-mermaid\b/.test(className || '')) {
+        return <Mermaid chart={String(children).replace(/\n$/, '')} />;
+      }
+      return (
+        <code className={className} {...props}>
+          {children}
+        </code>
+      );
+    },
+    // mermaid図は装飾済みの<pre>で囲まない
+    pre: ({ children, ...props }) => {
+      const child = Array.isArray(children) ? children[0] : children;
+      if (child?.props?.className?.includes?.('language-mermaid')) {
+        return <>{children}</>;
+      }
+      return <pre {...props}>{children}</pre>;
+    },
+    a: ({ href, children, ...props }) => {
+      if (href && href.startsWith('./')) {
+        const fileName = href.slice(2);
+        const resolved = `${import.meta.env.BASE_URL}articles/report/${fileName}`;
+        return (
+          <a href={resolved} download {...props}>
+            {children}
+          </a>
+        );
+      }
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+          {children}
+        </a>
+      );
+    },
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -70,7 +110,7 @@ const IdeaArticlesScreen = () => {
           <>
             <p className="text-gray-400 mb-8">{t.subtitle}</p>
             <div className="flex flex-col gap-4">
-              {ideaArticles.map((article) => (
+              {reportArticles.map((article) => (
                 <button
                   key={article.id}
                   onClick={() => setSelectedArticle(article)}
@@ -115,7 +155,7 @@ const IdeaArticlesScreen = () => {
             prose-th:border prose-th:border-white/20 prose-th:bg-white/10 prose-th:px-4 prose-th:py-2 prose-th:text-left
             prose-td:border prose-td:border-white/20 prose-td:px-4 prose-td:py-2
           ">
-            <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]}>{selectedArticle.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} components={markdownComponents}>{selectedArticle.content}</ReactMarkdown>
           </article>
         )}
       </div>
@@ -123,4 +163,4 @@ const IdeaArticlesScreen = () => {
   );
 };
 
-export default IdeaArticlesScreen;
+export default ReportScreen;

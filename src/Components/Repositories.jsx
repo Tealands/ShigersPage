@@ -14,7 +14,7 @@ const RepositoriesScreen = () => {
                 sortTodoDesc: '私が個人で開発したソート機能付きTodoサイトです。ローカルファイルにデータを保存し、そこからデータを復元することもできます。',
                 dictionalyDesc: '辞書作成アプリです。単語は辞書順にソートされます。',
                 todoAppName: 'TodoApp（デスクトップ版）',
-                todoAppDesc: 'Microsoft Access Database に対応したWindowsデスクトップTodoアプリです。Python(Flask)製で、インストーラー1つで環境構築不要で使えます。',
+                todoAppDesc: 'Microsoft Access Database に対応したWindowsデスクトップTodoアプリです。Python(Flask)製で、使用するにはPython環境構築が必要になります。',
                 todoAppFeature1: 'ASAPゾーン：今すぐやるタスクを管理',
                 todoAppFeature2: 'メインリスト：期限付きタスクを管理',
                 todoAppFeature3: 'JSONエクスポートでバックアップ可能',

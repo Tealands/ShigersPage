@@ -11,6 +11,7 @@ import blueRiver from '../assets/BackScreen/BlueRiver.JPG';
 import shaningBridge from '../assets/BackScreen/ShaningBridge.JPG';
 import winterRiver from '../assets/BackScreen/WinterRiver.JPG';
 import { ScreenContext } from './ScreenContext';
+import VisitorCounter from './VisitorCounter';
 
 const shuffle = (arr) => {
   const a = [...arr];
@@ -55,6 +56,10 @@ return (
         />
       ))}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+      {/* アクセス数（ヘッダー画像の左上） */}
+      <div className="absolute top-4 left-4 z-20">
+        <VisitorCounter />
+      </div>
       {/* 言語切り替えボタン */}
       <div className="absolute top-4 right-4 z-20">
         <button

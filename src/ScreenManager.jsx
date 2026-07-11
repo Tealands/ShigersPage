@@ -7,6 +7,7 @@ import RelatedPageScreen from './Components/RelatedPageScreen.jsx';
 import RepositoryScreen from './Components/RepositoryScreen.jsx';
 import IdeaArticlesScreen from './Components/IdeaArticlesScreen.jsx';
 import OriginalProblemsScreen from './Components/OriginalProblemsScreen.jsx';
+import ReportScreen from './Components/ReportScreen.jsx';
 import GalleryScreen from './Components/GalleryScreen.jsx';
 import QualificationsScreen from './Components/QualificationsScreen.jsx';
 import TypingAnimation from './Components/Animetion';
@@ -23,6 +24,7 @@ const ScreenManager = () => {
     const openRepositoryScreen = () => setCurrentScreen('REPOSITORY');
     const openIdeaArticlesScreen = () => setCurrentScreen('IDEA_ARTICLES');
     const openOriginalProblemsScreen = () => setCurrentScreen('ORIGINAL_PROBLEMS');
+    const openReportScreen = () => setCurrentScreen('REPORT');    
     const openGalleryScreen = () => setCurrentScreen('GALLERY');
     const openQualificationsScreen = () => setCurrentScreen('QUALIFICATIONS');
 
@@ -36,6 +38,7 @@ const ScreenManager = () => {
         window.openRepositoryScreen = openRepositoryScreen;
         window.openIdeaArticlesScreen = openIdeaArticlesScreen;
         window.openOriginalProblemsScreen = openOriginalProblemsScreen;
+        window.openReportScreen = openReportScreen;
 
         // Cleanup
         return () => {
@@ -44,6 +47,7 @@ const ScreenManager = () => {
             delete window.openRepositoryScreen;
             delete window.openIdeaArticlesScreen;
             delete window.openOriginalProblemsScreen;
+            delete window.openReportScreen;
         };
     }, []);
 
@@ -105,6 +109,8 @@ const ScreenManager = () => {
                 return <IdeaArticlesScreen />;
             case 'ORIGINAL_PROBLEMS':
                 return <OriginalProblemsScreen />;
+            case 'REPORT':
+                return <ReportScreen />;
             case 'GALLERY':
                 return (
                     <div className="min-h-screen bg-gray-900">
@@ -123,7 +129,7 @@ const ScreenManager = () => {
     };
 
     return (
-        <ScreenContext.Provider value={{ openTitleScreen, openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, openGalleryScreen, openQualificationsScreen, language, toggleLanguage }}>
+        <ScreenContext.Provider value={{ openTitleScreen, openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, openReportScreen, openGalleryScreen, openQualificationsScreen, language, toggleLanguage }}>
             {renderScreen()}
         </ScreenContext.Provider>
     );

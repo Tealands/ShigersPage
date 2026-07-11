@@ -1,0 +1,36 @@
+import helloReport from './report/HelloReport.md?raw';
+import KaratubaReport from './report/katatuba.md?raw';
+import ShorthandNotation from './report/ShorthandNotation.md?raw';
+
+export const reportArticles = [
+  {
+    id: 1,
+    slug: 'hello-report',
+    title: 'report記事',
+    titleEn: 'First Report Article',
+    date: '2026-07-10',
+    description: 'このレポートページについて。',
+    descriptionEn: 'The report page.',
+    content: helloReport,
+  },
+  {
+    id: 2,
+    slug: 'karatuba-report',
+    title: 'カラツバ法まとめ',
+    titleEn: 'Karatuba_methed',
+    date: '2026-07-10',
+    description: 'カラツバ法について勉強したのでまとめてみた',
+    descriptionEn: 'I made report because I studied karatuba methed',
+    content: KaratubaReport,
+  },
+  {
+    id: 3,
+    slug: 'shorthandnotation',
+    title: '数学略記法',
+    titleEn: 'Shorthand Notation',
+    date: '2026-07-10',
+    description: '数学で統一した新しい略記法を考えてみた',
+    descriptionEn: 'I came up with a new, unified shorthand notation for mathematics.',
+    content: ShorthandNotation,
+  },
+];

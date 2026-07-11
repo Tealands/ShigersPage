@@ -3,7 +3,7 @@ import { ScreenContext } from './ScreenContext';
 
 const ActionButtons = () => {
   const context = useContext(ScreenContext);
-  const { openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, openGalleryScreen, openQualificationsScreen, language } = context || {};
+  const { openRelatedPageScreen, openRepositoryScreen, openIdeaArticlesScreen, openOriginalProblemsScreen, openReportScreen, openGalleryScreen, openQualificationsScreen, language } = context || {};
 
   const getText = (key) => {
     const texts = {
@@ -12,6 +12,7 @@ const ActionButtons = () => {
         viewRepositories: 'リポジトリを見る',
         ideaArticles: 'アイデア記事',
         originalProblems: 'オリジナル問題',
+        report: 'レポート',
         gallery: '旅行で撮った写真',
         qualifications: '保有資格一覧',
       },
@@ -20,6 +21,7 @@ const ActionButtons = () => {
         viewRepositories: 'View Repositories',
         ideaArticles: 'Idea Articles',
         originalProblems: 'Original Problems',
+        report: 'Reports',
         gallery: 'Pictures of Trip',
         qualifications: 'Qualifications',
       }
@@ -70,6 +72,17 @@ const ActionButtons = () => {
         </svg>
       ),
       colorClass: 'bg-purple-900/40 hover:bg-purple-800/60 border border-purple-400/30 hover:border-purple-400/60 text-purple-300',
+    },
+    {
+      label: getText('report'),
+      onClick: () => openReportScreen?.(),
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+      colorClass: 'bg-sky-900/40 hover:bg-sky-800/60 border border-sky-400/30 hover:border-sky-400/60 text-sky-300',
     },
     {
       label: getText('gallery'),
