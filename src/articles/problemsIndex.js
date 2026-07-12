@@ -1,5 +1,6 @@
 import xPlusAN from './problems/(x+a)^n.md?raw';
 import repeatingOnes from './problems/1111-11-mod6.md?raw';
+import specialLimit from './problems/limit.md?raw';
 
 export const problemArticles = [
   {
@@ -28,4 +29,17 @@ export const problemArticles = [
     descriptionEn: 'Find the remainder when a repunit (n ones) is divided by 6.',
     content: repeatingOnes,
   },
+  {
+    id: 3,
+    slug: 'special-limit',
+    title: '次の極限を求めよ。',
+    titleEn: 'Find the following limit.',
+    date: '2026-05-17',
+    difficulty: '★★★',
+    difficultyLabel: '解くだけなら簡単',
+    difficultyLabelEn: 'Hard',
+    description: '次の極限を求めよ。',
+    descriptionEn: 'Find the following limit.',
+    content: specialLimit,
+  },  
 ];
