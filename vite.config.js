@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // IMPORTANT for GitHub Pages under a subpath:
-  base: '/ShigersPage/',
+  // Development: '/', Production (GitHub Pages): '/ShigersPage/'
+  base: process.env.NODE_ENV === 'production' ? '/ShigersPage/' : '/',
 
   // Optional: stricter asset handling / path behavior
   build: {

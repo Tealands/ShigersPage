@@ -1,6 +1,7 @@
 import helloReport from './report/HelloReport.md?raw';
 import KaratubaReport from './report/katatuba.md?raw';
 import ShorthandNotation from './report/ShorthandNotation.md?raw';
+import SocialDesignProcess from './report/SocialDesignProcess.md?raw';
 
 export const reportArticles = [
   {
@@ -32,5 +33,15 @@ export const reportArticles = [
     description: '数学で統一した新しい略記法を考えてみた',
     descriptionEn: 'I came up with a new, unified shorthand notation for mathematics.',
     content: ShorthandNotation,
+  },
+  {
+    id: 4,
+    slug: 'social-design-process',
+    title: 'CE計画(東京駅新幹線対面乗り換えプロジェクト)',
+    titleEn: 'CE Plan (Tokyo Station Face-to-Face Shinkansen Transfer Project)',
+    date: '2026-07-23',
+    description: '東京駅での東海道・東北新幹線の対面乗り換えを実現する社会設計プロセスの最終レポート。',
+    descriptionEn: 'Final report on a social design process to realize face-to-face transfers between Tokaido and Tohoku Shinkansen at Tokyo Station.',
+    content: SocialDesignProcess,
   },
 ];
