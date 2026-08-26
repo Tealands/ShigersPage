@@ -73,7 +73,10 @@ const RepositoriesScreen = () => {
         { tool: 'GitHub', purpose: language === 'ja' ? 'Webサイト・ゲーム開発' : 'Website and game development', prof: '◎' },
         { tool: 'Unity', purpose: language === 'ja' ? 'ゲーム開発' : 'Game development', prof: '△' },
         { tool: 'Blender', purpose: language === 'ja' ? 'アニメーション開発' : 'Animation development', prof: '〇' },
-        { tool: 'Android Studio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '〇' }                
+        { tool: 'Android Studio', purpose: language === 'ja' ? 'モバイルアプリ開発' : 'Mobile App development', prof: '〇' },
+        { tool: 'Processing', purpose: language === 'ja' ? 'ビジュアルプログラミング' : 'Visual programming', prof: '〇' },
+        { tool: 'Visual Studio', purpose: language === 'ja' ? 'グラフィックス開発' : 'Graphics development', prof: '〇' }
+        
     ];
 
     return (
